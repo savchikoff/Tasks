@@ -59,3 +59,35 @@ function test() {
 
 function doNothing() {}
 console.log(doNothing() === undefined);
+
+function sayHello(name) {
+    console.log(`Привет, ${name}!`);
+}
+
+sayHello("Антон");
+
+function returnNeighboringNumbers(number) {
+    let array = [number-1, number, number+1];
+    return array;
+}
+
+console.log(returnNeighboringNumbers(5));
+
+function getMathResult(base, repeat) {
+    let string = "";
+    if (typeof (repeat) !== "number" || repeat <=0){
+        return base;
+    } else {
+        for (let i = 1; i < repeat+1; i++){
+            if (i < repeat+1){
+                string+=base*i;
+                if (i<repeat){
+                string+="---";
+                }
+            }
+        }
+    }
+    return string;
+}
+
+console.log(getMathResult(10,0));
