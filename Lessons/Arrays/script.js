@@ -1,6 +1,12 @@
 "use strict";
 
-const arr = [1, 2, 3, 6, 8];
+const arr = [2,13,26,8,10];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a,b){
+    return a - b;
+}
 
 // arr[99]=0;
 // console.log(arr);
